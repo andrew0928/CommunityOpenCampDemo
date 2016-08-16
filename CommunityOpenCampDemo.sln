@@ -7,11 +7,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoWeb", "DemoWeb\DemoWeb.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F600F0A-ADA5-4D87-9BE2-659B70891FFB}"
 	ProjectSection(SolutionItems) = preProject
-		dockerfile = dockerfile
 		readme.md = readme.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DemoProxy(Nginx)", "DemoProxy(Nginx)", "{FE40F35C-FD6B-44CA-A61F-4A78E3598A7A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Containers", "Containers", "{AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{C6A635DE-AEED-4176-8D56-ED987F3AE92E}"
+	ProjectSection(SolutionItems) = preProject
+		Containers\Web\build.cmd = Containers\Web\build.cmd
+		Containers\Web\dockerfile = Containers\Web\dockerfile
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RevProxy(IIS-ARR)", "RevProxy(IIS-ARR)", "{6C3E447B-B8E9-48BA-A2D0-DB83A390A89D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RevProxy(Nginx)", "RevProxy(Nginx)", "{ABBF614F-CDE0-4600-BFB0-BC8B1F5C624A}"
 	ProjectSection(SolutionItems) = preProject
 		DemoProxy(Nginx)\dockerfile = DemoProxy(Nginx)\dockerfile
 		DemoProxy(Nginx)\nginx.conf = DemoProxy(Nginx)\nginx.conf
@@ -30,5 +39,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C6A635DE-AEED-4176-8D56-ED987F3AE92E} = {AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}
+		{6C3E447B-B8E9-48BA-A2D0-DB83A390A89D} = {AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}
+		{ABBF614F-CDE0-4600-BFB0-BC8B1F5C624A} = {AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}
 	EndGlobalSection
 EndGlobal
