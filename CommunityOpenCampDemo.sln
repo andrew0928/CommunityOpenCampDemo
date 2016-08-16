@@ -19,11 +19,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{C6A635DE-AEE
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RevProxy(IIS-ARR)", "RevProxy(IIS-ARR)", "{6C3E447B-B8E9-48BA-A2D0-DB83A390A89D}"
+	ProjectSection(SolutionItems) = preProject
+		Containers\RevProxy(IIS-ARR)\dockerfile = Containers\RevProxy(IIS-ARR)\dockerfile
+		Containers\RevProxy(IIS-ARR)\start.ps1 = Containers\RevProxy(IIS-ARR)\start.ps1
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RevProxy(Nginx)", "RevProxy(Nginx)", "{ABBF614F-CDE0-4600-BFB0-BC8B1F5C624A}"
 	ProjectSection(SolutionItems) = preProject
-		DemoProxy(Nginx)\dockerfile = DemoProxy(Nginx)\dockerfile
-		DemoProxy(Nginx)\nginx.conf = DemoProxy(Nginx)\nginx.conf
+		Containers\RevProxy(Nginx)\dockerfile = Containers\RevProxy(Nginx)\dockerfile
+		Containers\RevProxy(Nginx)\nginx.conf = Containers\RevProxy(Nginx)\nginx.conf
 	EndProjectSection
 EndProject
 Global
