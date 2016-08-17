@@ -1,12 +1,31 @@
 FROM windowsservercore:10.0.14300.1000
-
 LABEL Description="Nginx" Vendor=Nginx" Version="1.1.13"
 
 COPY nginx /nginx
 COPY nginx.conf /nginx/conf/nginx.conf
-
 CMD [ "/nginx/nginx.exe" ]
-
 
 # docker build -t=andrew/revproxy:latest .
 # docker run --rm -t -i andrew/revproxy cmd.exe
+
+
+
+
+# # This dockerfile utilizes components licensed by their respective owners/authors.
+# # Prior to utilizing this file or resulting images please review the respective licenses at: http://nginx.org/LICENSE
+# 
+# FROM windowsservercore:10.0.14300.1000
+# 
+# LABEL Description="Nginx" Vendor=Nginx" Version="1.0.13"
+# RUN powershell -Command \
+# 	$ErrorActionPreference = 'Stop'; \
+# 	Invoke-WebRequest -Method Get -Uri http://nginx.org/download/nginx-1.9.13.zip -OutFile c:\nginx-1.9.13.zip ; \
+# 	Expand-Archive -Path c:\nginx-1.9.13.zip -DestinationPath c:\ ; \
+# 	Remove-Item c:\nginx-1.9.13.zip -Force
+# 
+# COPY nginx.conf /nginx-1.9.13/conf/nginx.conf
+# 
+# WORKDIR /nginx-1.9.13
+# CMD ["/nginx-1.9.13/nginx.exe"]
+
+
