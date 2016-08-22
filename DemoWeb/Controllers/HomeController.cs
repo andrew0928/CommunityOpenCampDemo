@@ -16,7 +16,7 @@ namespace DemoWeb.Controllers
         public ActionResult About()
         {
             ViewBag.Message = //"Your application description page.";
-                "SERVER: " + this.Request.Url.DnsSafeHost;
+                $"SERVER: {this.Request.ServerVariables["LOCAL_ADDR"]}";
 
             return View();
         }
