@@ -1,4 +1,5 @@
-FROM windowsservercore:10.0.14300.1000
+# FROM windowsservercore:10.0.14300.1000
+FROM microsoft/windowsservercore:latest
 
 MAINTAINER Andrew Wu, https://www.facebook.com/andrewwu.blog.0928
 

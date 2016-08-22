@@ -4,7 +4,7 @@
 # microsoft github reference: https://github.com/Microsoft/Virtualization-Documentation/tree/master/windows-container-samples/windowsservercore/nginx
 
 
-FROM windowsservercore
+FROM microsoft/windowsservercore
 
 LABEL Description="Nginx" Vendor=Nginx" Version="1.1.13"
 
