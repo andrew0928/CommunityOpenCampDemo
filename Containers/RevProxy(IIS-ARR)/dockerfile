@@ -1,6 +1,7 @@
-FROM microsoft/iis
+# FROM windowsservercore:10.0.14300.1000
+# RUN powershell -Command Add-WindowsFeature Web-Server
 
-MAINTAINER Max Knor
+FROM microsoft/iis
 
 WORKDIR /
 
@@ -26,11 +27,12 @@ RUN msiexec /i "requestRouter_x64.msi" /q /log foo.log
 
 RUN reg add HKLM\SOFTWARE\Microsoft\InetStp /v MajorVersion /t REG_DWORD /d 0xa /f
 
-RUN @powershell restart-service was -force
-RUN @powershell restart-service wmsvc -force
+# RUN @powershell restart-service was -force
+# RUN @powershell restart-service wmsvc -force
+
 
 ADD ./start.ps1 /
 
 CMD powershell ./start.ps1 -serverfarms \"%serverfarms%\" -Verbose
-
-# docker run -d -v C:/temp/:C:/temp/ -e serverfarms="[{'name':'Maxtest123','servers':[{'address':'172.21.116.32'}]}]" --link web1:web1 -p 80:80 knom/iis-arr
+# docker run -d -v C:/temp/:C:/temp/ -e serverfarms="[{'name':'Maxtest123','servers':[{'address':'172.21.116.32'}]}]" --link web1:w
+eb1 -p 80:80 knom/iis-arr

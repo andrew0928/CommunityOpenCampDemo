@@ -15,7 +15,8 @@ namespace DemoWeb.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = //"Your application description page.";
+                "SERVER: " + this.Request.Url.DnsSafeHost;
 
             return View();
         }

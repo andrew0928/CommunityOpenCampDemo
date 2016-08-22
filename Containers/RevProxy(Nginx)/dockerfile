@@ -3,6 +3,8 @@
 
 # microsoft github reference: https://github.com/Microsoft/Virtualization-Documentation/tree/master/windows-container-samples/windowsservercore/nginx
 
+# docker build -t=andrew/revproxy:latest .
+# docker run --rm -t -i andrew/revproxy cmd.exe
 
 FROM microsoft/windowsservercore:latest
 
