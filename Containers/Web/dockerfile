@@ -5,5 +5,4 @@ LABEL Description="CommunityOpenCamp Demo" Vendor="Andrew Studio" Version="8.27.
 # copy demoweb
 ADD webapp c:/inetpub/wwwroot/
 
-CMD [ "powershell", "invoke-restmethod", "http://localhost/"]
 CMD [ "ping", "localhost", "-t" ]

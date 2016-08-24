@@ -27,7 +27,7 @@ docker build -t microsoft/iis-aspnet45:latest .
 
 #### step 1, build beta image of demoweb
 ```
-docker build -t andrew/demoweb:1.0-beta -t andrew/demoweb:latest .
+docker build --no-cache -t andrew/demoweb:1.0-beta -t andrew/demoweb:latest .
 ```
 
 #### step 2, run beta demoweb
@@ -47,7 +47,7 @@ copy e:\DemoWeb\App_Data\logo.png c:\demovol
 #### step 4, update code
 change version to 1.0-rtm, clean, build, publish, build image, run
 ```
-docker build -t andrew/demoweb:1.0-rtm -t andrew/demoweb:latest .
+docker build --no-cache -t andrew/demoweb:1.0-rtm -t andrew/demoweb:latest .
 docker run --name demo82 -d -p 82:80 -v c:\demovol:c:\inetpub\wwwroot\app_data andrew/demoweb:latest
 ```
 > go to website demo81 [about] page, see beta version
