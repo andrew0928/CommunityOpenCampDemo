@@ -30,6 +30,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RevProxy(Nginx)", "RevProxy
 		Containers\RevProxy(Nginx)\nginx.conf = Containers\RevProxy(Nginx)\nginx.conf
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IIS-ASPNET45", "IIS-ASPNET45", "{C7B0C071-6644-4978-9097-4D749DBB5303}"
+	ProjectSection(SolutionItems) = preProject
+		Containers\IIS-ASPNET45\dockerfile = Containers\IIS-ASPNET45\dockerfile
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +53,6 @@ Global
 		{C6A635DE-AEED-4176-8D56-ED987F3AE92E} = {AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}
 		{6C3E447B-B8E9-48BA-A2D0-DB83A390A89D} = {AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}
 		{ABBF614F-CDE0-4600-BFB0-BC8B1F5C624A} = {AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}
+		{C7B0C071-6644-4978-9097-4D749DBB5303} = {AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}
 	EndGlobalSection
 EndGlobal

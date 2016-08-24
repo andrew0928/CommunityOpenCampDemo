@@ -15,10 +15,24 @@ namespace DemoWeb.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = //"Your application description page.";
-                $"SERVER IP: {this.Request.ServerVariables["LOCAL_ADDR"]}";
+            ViewBag.ServerIP = this.Request.ServerVariables["LOCAL_ADDR"];
+            //ViewBag.Version = "1.0 alpha";
+            ViewBag.Version = "1.0 beta";
+            //ViewBag.Version = "1.0 RTM";
 
             return View();
+        }
+
+        public ActionResult Logo()
+        {
+            string file = this.Server.MapPath("~/App_Data/Logo.png");
+            if (System.IO.File.Exists(file))
+            {
+                return File(file, "image/png");
+            }else
+            {
+                return File("~/Content/default-logo.png", "image/png");
+            }
         }
 
         public ActionResult Contact()
