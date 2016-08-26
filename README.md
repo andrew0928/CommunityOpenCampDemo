@@ -62,9 +62,20 @@ docker run --name demo81 -d -p 81:80 -v c:\demovol:c:\inetpub\wwwroot\app_data a
 > go to website demo82 [about] page, see rtm version
 
 
+## Bad Guys Demo
 
+in win2016 host, try to kill process inside containers.
+```
+tasklist /fi "imagename eq ping.exe"
+taskkill /pid 123
 
+docker ps -a
+```
 
+solution: hyper-v isolation (not run under vm)
+```
+docker run --name demo83 -d -p 83:80 --isolation hyperv -v c:\demovol:c:\inetpub\wwwroot\app_data andrew/demoweb:latest
+```
 
 
 

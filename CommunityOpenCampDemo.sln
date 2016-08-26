@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3F600F0A-ADA5-4D87-9BE2-659B70891FFB}"
 	ProjectSection(SolutionItems) = preProject
 		readme.md = readme.md
+		微服務架構 導入經驗分享-吳剛志.pptx = 微服務架構 導入經驗分享-吳剛志.pptx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Containers", "Containers", "{AD732344-A1D7-4D4A-8D9E-07D0D2E651A9}"
