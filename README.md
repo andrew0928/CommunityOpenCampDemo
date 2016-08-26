@@ -67,9 +67,20 @@ docker run --name demo81 -d -p 81:80 -v c:\demovol:c:\inetpub\wwwroot\app_data a
 in win2016 host, try to kill process inside containers.
 ```
 tasklist /fi "imagename eq ping.exe"
-taskkill /pid 123
+taskkill /pid 9999
 
 docker ps -a
+```
+
+in container, can not see all process on this host
+```
+docker run --rm -t -i microsoft/iis cmd.exe
+tasklist
+```
+
+in host, can see all process
+```
+tasklist
 ```
 
 solution: hyper-v isolation (not run under vm)
